@@ -132,7 +132,9 @@
     .hero-tag { color: var(--ink-soft); font-size: 1.05rem; max-width: 34em; margin-bottom: 34px; }
     .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; }
     .portrait { position: relative; max-width: 400px; margin-left: auto; }
-    .portrait img { width: 100%; height: auto; border-radius: 3px; filter: grayscale(0.1) contrast(1.02); display: block; }
+    .portrait img { width: 100%; height: auto; border-radius: 3px; filter: grayscale(0.1) contrast(1.02); display: block;
+      transition: transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .5s, filter .5s; }
+    .portrait:hover img { transform: scale(1.035); filter: grayscale(0) contrast(1.03); box-shadow: 0 30px 60px -24px rgba(23,32,58,0.45); }
     .banner-band { border-block: 1px solid var(--line); line-height: 0; }
     .banner-band img { width: 100%; height: clamp(200px, 26vw, 340px); object-fit: cover; object-position: center 34%; filter: grayscale(1) contrast(1.04); display: block; }
     .portrait::after { content:''; position: absolute; inset: 14px -14px -14px 14px; border: 1px solid var(--accent); border-radius: 3px; z-index: -1; }
